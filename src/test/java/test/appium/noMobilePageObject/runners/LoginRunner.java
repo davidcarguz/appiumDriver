@@ -10,7 +10,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @CucumberOptions(
 features = "src/test/resources/features/"
 ,glue = "test.appium.noMobilePageObject.definitions"
-,tags = "@login_exitoso"
+,tags = "@pago_exitoso"
 ,snippets = SnippetType.CAMELCASE
 )
 

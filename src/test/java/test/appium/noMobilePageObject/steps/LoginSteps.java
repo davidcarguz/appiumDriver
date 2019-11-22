@@ -33,5 +33,20 @@ public class LoginSteps {
 		Serenity.takeScreenshot();
 		
 	}
+	
+	@Step
+	public void ingresoAFormulario() {
+		loginPageObjects.darClicEnMakePayment();
+		
+	}
 
+	@Step
+	public void diligenciarPago(String numero, String nombre, String cantidad, String pais) {
+		loginPageObjects.ingresarNumeroTelefonico(numero);
+		loginPageObjects.ingresarNombre(nombre);
+		loginPageObjects.ingresarValorPago(cantidad);
+		loginPageObjects.darClicEnBuscarPais();
+		loginPageObjects.SeleccionarPais(pais);
+		
+	}
 }

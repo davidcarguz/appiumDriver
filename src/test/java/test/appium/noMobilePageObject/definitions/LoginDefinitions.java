@@ -28,4 +28,20 @@ public class LoginDefinitions {
 	public void validoIngresoALaAplicacion(String mensaje) {
 		loginSteps.validarIngreso(mensaje);
 	}
+	
+	@When("^ingreso al formulario ingresar pago$")
+	public void ingresoAlFormularioIngresarPago() {
+	    loginSteps.ingresoAFormulario();
+	}
+
+
+	@When("^diligencio formulario de pago con numero \"([^\"]*)\" nombre \"([^\"]*)\" cantidad \"([^\"]*)\" pais \"([^\"]*)\"$")
+	public void diligencioFormularioDePagoConNumeroNombreCantidadPais(String numero, String nombre, String cantidad, String pais) {
+	    loginSteps.diligenciarPago(numero,nombre,cantidad,pais);
+	}
+
+	@Then("^valido pago exitoso$")
+	public void validoPagoExitoso() {
+
+	}
 }
